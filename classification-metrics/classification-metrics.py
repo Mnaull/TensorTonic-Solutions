@@ -16,9 +16,7 @@ def classification_metrics(y_true, y_pred, average="micro", pos_label=1):
     dic={}
     
     nb_classes=len(set(y_true+y_pred))
-    print(nb_classes)
-    print(y_true+y_pred)
-    print(set(y_true+y_pred))
+  
     y_true=np.array(y_true)
     y_pred=np.array(y_pred)
     CONF=np.zeros((nb_classes,nb_classes))
@@ -26,7 +24,6 @@ def classification_metrics(y_true, y_pred, average="micro", pos_label=1):
     nb_data=len(y_true)
 
     array_metrics=np.zeros((nb_classes,3))
-    print(array_metrics)
     for k in range(nb_data):
         i=y_pred[k]
         j=y_true[k]

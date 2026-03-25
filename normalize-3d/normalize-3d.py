@@ -15,8 +15,7 @@ def normalize_3d(v):
         norm=np.sqrt(v[:,0]**2+v[:,1]**2+v[:,2]**2)
         zero=[norm<10**(-10)]
         norm_bis=norm+zero
-        print(norm)
-        print(norm_bis)
+        
         return v/np.transpose(norm_bis)
         
     pass
